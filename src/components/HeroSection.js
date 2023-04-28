@@ -10,9 +10,11 @@ const HeroSection = ({ myData }) => {
 			<div className="container">
 				<div className="grid grid-two-column">
 					<div className="hero-section-data">
-						<p className="intro-data">Welcome to </p>
-						<h1> {name} </h1>
-						<p>
+						<p className="intro-data">
+							<b>Welcome to</b>
+						</p>
+						<h1 style={{ color: "rgb(126 126 147)" }}>Laxmi Store</h1>
+						<p style={{ color: "rgb(98 92 92 / 80%)" }}>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
 							atque temporibus veniam doloribus libero ad error omnis voluptates
 							animi! Suscipit sapiente.
@@ -24,7 +26,7 @@ const HeroSection = ({ myData }) => {
 					<div className="hero-section-image">
 						<figure>
 							<img
-								src="images/hero.jpg"
+								src="images/hero1.jpg"
 								alt="hero-section-pic"
 								className="img-style"
 							/>
@@ -56,6 +58,7 @@ const Wrapper = styled.section`
 
 		.intro-data {
 			margin-bottom: 0;
+			color: #b9e35f;
 		}
 	}
 
@@ -73,7 +76,7 @@ const Wrapper = styled.section`
 			content: "";
 			width: 60%;
 			height: 80%;
-			background-color: rgba(81, 56, 238, 0.4);
+			background-color: #b9e35f;
 			position: absolute;
 			left: 50%;
 			top: -5rem;

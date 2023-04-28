@@ -23,7 +23,7 @@ const SingleProduct = () => {
 		id: alias,
 		name,
 		company,
-		price,
+		price,																							
 		description,
 		stock,
 		stars,
@@ -51,23 +51,29 @@ const SingleProduct = () => {
 
 					{/* product dAta  */}
 					<div className="product-data">
-						<h2>{name}</h2>
+						<h2 style={{ color: "rgb(126 126 147)" }}>{name}</h2>
 						<Star stars={stars} reviews={reviews} />
 
-						<p className="product-data-price">
+						<p
+							className="product-data-price"
+							style={{ color: "rgb(126 126 147)" }}
+						>
 							MRP:
 							<del>
 								<FormatPrice price={price + 250000} />
 							</del>
 						</p>
-						<p className="product-data-price product-data-real-price">
+						<p
+							className="product-data-price product-data-real-price"
+							style={{ color: "#b9e35f" }}
+						>
 							Deal of the Day: <FormatPrice price={price} />
 						</p>
 						<p>{description}</p>
 						<div className="product-data-warranty">
 							<div className="product-warranty-data">
 								<TbTruckDelivery className="warranty-icon" />
-								<p>Free Delivery</p>
+								<p style={{ color: "rgb(126 126 147)" }}>Free Delivery</p>
 							</div>
 
 							<div className="product-warranty-data">
@@ -77,7 +83,7 @@ const SingleProduct = () => {
 
 							<div className="product-warranty-data">
 								<TbTruckDelivery className="warranty-icon" />
-								<p>Thapa Delivered </p>
+								<p>Laxmi Delivered </p>
 							</div>
 
 							<div className="product-warranty-data">
@@ -87,14 +93,14 @@ const SingleProduct = () => {
 						</div>
 
 						<div className="product-data-info">
-							<p>
+							<p style={{ color: "rgb(126 126 147)" }}>
 								Available:
 								<span> {stock > 0 ? "In Stock" : "Not Available"}</span>
 							</p>
-							<p>
+							<p style={{ color: "rgb(126 126 147)" }}>
 								ID : <span> {id} </span>
 							</p>
-							<p>
+							<p style={{ color: "rgb(126 126 147)" }}>
 								Brand :<span> {company} </span>
 							</p>
 						</div>
@@ -136,7 +142,8 @@ const Wrapper = styled.section`
 				text-align: center;
 
 				.warranty-icon {
-					background-color: rgba(220, 220, 220, 0.5);
+					background-color: rgb(245 245 247);
+					color: #b9e35f;
 					border-radius: 50%;
 					width: 4rem;
 					height: 4rem;

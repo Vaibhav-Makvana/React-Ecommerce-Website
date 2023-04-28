@@ -146,7 +146,8 @@ input, textarea{
     input[type="submit"]{
     max-width: 16rem;
     margin-top: 2rem;
-    background-color: ${({ theme }) => theme.colors.btn};
+    background-color: #b9e35f;
+    border-radius:4px;
     color: ${({ theme }) => theme.colors.white};
     padding: 1.4rem 2.2rem;
     border-style: solid;

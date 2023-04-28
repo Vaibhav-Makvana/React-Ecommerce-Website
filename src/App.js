@@ -11,6 +11,8 @@ import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Privacy from "./Privacy";
+import Conditions from "./Conditions";
 
 const App = () => {
 	const theme = {
@@ -48,6 +50,8 @@ const App = () => {
 					<Route path="/about" element={<About />} />
 					<Route path="/products" element={<Products />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/privacy" element={<Privacy />} />
+					<Route path="/conditions" element={<Conditions />} />
 					<Route path="/singleproduct/:id" element={<SingleProduct />} />
 					<Route path="/cart" element={<Cart />} />
 					<Route path="*" element={<ErrorPage />} />

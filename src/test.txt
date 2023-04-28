@@ -1,4 +1,15 @@
-import { useProductContext } from "../context/productcontex";
+color:#b9e35f
+
+ style={{ color: "#b9e35f" }}
+
+ bg:rgb(126 126 147)
+
+ p:color:rgb(98 92 92 / 80%)
+
+https://formspree.io/f/mzbqyjpb
+
+
+ import { useProductContext } from "../context/productcontex";
 import styled from "styled-components";
 import Product from "./Product";
 
@@ -12,12 +23,10 @@ const FeatureProduct = () => {
 	return (
 		<Wrapper className="section">
 			<div className="container">
-				<p className="intro-data" style={{ color: "#b9e35f" }}>
+				<p className="intro-data">
 					<b>check now</b>
 				</p>
-				<div className="common-heading" style={{ color: "rgb(126, 126, 147)" }}>
-					Our Feature Services
-				</div>
+				<div className="common-heading">Our Feature Services</div>
 				<div className="grid grid-three-column">
 					{featureProducts.map((curElem) => {
 						return <Product key={curElem.id} {...curElem} />;

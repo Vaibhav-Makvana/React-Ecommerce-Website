@@ -4,18 +4,18 @@ import Services from "./components/Services";
 import Trusted from "./components/Trusted";
 
 const Home = () => {
-  const data = {
-    name: "thapa store",
-  };
+	const data = {
+		name: "Laxmi Store",
+	};
 
-  return (
-    <>
-      <HeroSection myData={data} />
-      <FeatureProduct />
-      <Services />
-      <Trusted />
-    </>
-  );
+	return (
+		<>
+			<HeroSection myData={data} />
+			<FeatureProduct />
+			<Services />
+			<Trusted />
+		</>
+	);
 };
 
 export default Home;

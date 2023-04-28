@@ -25,7 +25,9 @@ const Sort = () => {
 			</div>
 
 			<div className="product-data">
-				<p>{`${filter_products.length} Product Available`}</p>
+				<p
+					style={{ color: "rgb(126 126 147)" }}
+				>{`${filter_products.length} Product Available`}</p>
 			</div>
 
 			<div className="sort-selection">

@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import GooglePayButton from "@google-pay/button-react";
+import { PayPalButtons } from "@paypal/react-paypal-js";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { useCartContext } from "./context/cart_context";
 import CartItem from "./components/CartItem";
 import { NavLink } from "react-router-dom";
@@ -63,6 +66,63 @@ const Cart = () => {
 							<p>
 								<FormatPrice price={shipping_fee + total_price} />
 							</p>
+						</div>
+						<div>
+							<PayPalScriptProvider>
+								<PayPalButtons
+									aria-label="BUY WITH PAYPAL"
+									createOrder={(data, actions) => {
+										return actions.order.create({
+											purchase_units: [
+												{
+													amount: {
+														value: "100",
+													},
+												},
+											],
+										});
+									}}
+								/>
+							</PayPalScriptProvider>
+						</div>
+						<div>
+							<GooglePayButton
+								environment="TEST"
+								paymentRequest={{
+									apiVersion: 2,
+									apiVersionMinor: 0,
+									allowedPaymentMethods: [
+										{
+											type: "CARD",
+											parameters: {
+												allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+												allowedCardNetworks: ["MASTERCARD", "VISA"],
+											},
+											tokenizationSpecification: {
+												type: "PAYMENT_GATEWAY",
+												parameters: {
+													gateway: "example",
+													gatewayMerchantId: "exampleGatewayMerchantId",
+												},
+											},
+										},
+									],
+									merchantInfo: {
+										merchantId: "12345678901234567890",
+										merchantName: "Demo Merchant",
+									},
+									transactionInfo: {
+										totalPriceStatus: "FINAL",
+										totalPriceLabel: "Total",
+										totalPrice: "100.00",
+										currencyCode: "USD",
+										countryCode: "US",
+									},
+								}}
+								onLoadPaymentData={(paymentRequest) => {
+									console.log("load payment data", paymentRequest);
+								}}
+							/>
 						</div>
 					</div>
 				</div>
@@ -225,8 +285,9 @@ const Wrapper = styled.section`
 			text-transform: capitalize;
 			justify-content: flex-start;
 			align-items: flex-start;
+
 			.order-total--subdata {
-				width: 100%;
+				width: auto;
 				border: 0.1rem solid #f0f0f0;
 				display: flex;
 				flex-direction: column;

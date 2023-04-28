@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Button } from "../styles/Button";
-import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
 	return (
@@ -11,8 +11,18 @@ const Footer = () => {
 				<section className="contact-short">
 					<div className="grid grid-two-column">
 						<div>
-							<h3>Ready to get started?</h3>
-							<h3>Talk to us today</h3>
+							<h3
+								style={{
+									color: "rgb(126, 126, 147)",
+									letterSpacing: "1px",
+									lineHeight: "33px",
+								}}
+							>
+								Ready to get started?
+							</h3>
+							<h3 style={{ color: "rgb(126, 126, 147)", letterSpacing: "1px" }}>
+								Talk to us today
+							</h3>
 						</div>
 
 						<div>
@@ -22,18 +32,24 @@ const Footer = () => {
 						</div>
 					</div>
 				</section>
-				{/* footer section */}
 
 				<footer>
 					<div className="container grid grid-four-column">
 						<div className="footer-about">
-							<h3>Thapa Technical</h3>
-							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+							<h3 style={{ letterSpacing: "1px" }}>Laxmi Store</h3>
+							<p style={{ letterSpacing: "1px" }}>
+								C-29, Mohan Baug, Baroda Pristage, Varachha Road, Surat-395006.
+							</p>
 						</div>
 						<div className="footer-subscribe">
 							<h3>Subscribe to get important updates</h3>
-							<form action="#">
-								<input type="email" name="email" placeholder="YOUR E-MAIL" />
+							<form action="https://formspree.io/f/mzbqyjpb" method="post">
+								<input
+									type="email"
+									name="email"
+									placeholder="YOUR E-MAIL"
+									autoComplete="off"
+								/>
 
 								<input type="submit" value="subscribe" />
 							</form>
@@ -42,7 +58,7 @@ const Footer = () => {
 							<h3>Follow Us</h3>
 							<div className="footer-social--icons">
 								<div>
-									<FaDiscord className="icons" />
+									<FaFacebook className="icons" />
 								</div>
 								<div>
 									<FaInstagram className="icons" />
@@ -54,19 +70,42 @@ const Footer = () => {
 						</div>
 						<div className="footer-contact">
 							<h3>Call Us</h3>
-							<h3>+91 12345678978</h3>
+							<a href="tel:+91 12345678978">
+								<h3 style={{ textDecoration: "underline" }}>+91 12345678978</h3>
+							</a>
 						</div>
 					</div>
 
 					<div className="footer-bottom--section">
 						<hr />
-						<div className="container grid grid-two-column ">
-							<p>
-								@{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
+						<div className="container grid grid-three-column ">
+							<p style={{ letterSpacing: "1.5px" }}>
+								@{new Date().getFullYear()} Laxmi Store. All Rights Reserved
 							</p>
 							<div>
-								<p>PRIVACY POLICY</p>
-								<p>TERMS & CONDITIONS</p>
+								<NavLink to="/privacy">
+									<p
+										style={{
+											letterSpacing: "2px",
+											marginLeft: "55px",
+											textDecoration: "underline",
+										}}
+									>
+										PRIVACY POLICY
+									</p>
+								</NavLink>
+							</div>
+							<div>
+								<NavLink to="/conditions">
+									<p
+										style={{
+											letterSpacing: "2px",
+											textDecoration: "underline",
+										}}
+									>
+										TERMS & CONDITIONS
+									</p>
+								</NavLink>
 							</div>
 						</div>
 					</div>

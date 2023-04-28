@@ -4,7 +4,9 @@ const Trusted = () => {
 	return (
 		<Wrapper className="brand-section">
 			<div className="container">
-				<h3>Trusted By 1000+ Companies</h3>
+				<h3 style={{ color: "rgb(126, 126, 147)", fontWeight: "600" }}>
+					Trusted By 20+ Companies
+				</h3>
 				<div className="brand-section-slider">
 					<div className="slide">
 						<img

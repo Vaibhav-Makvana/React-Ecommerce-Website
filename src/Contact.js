@@ -20,11 +20,11 @@ const Contact = () => {
 					input[type="submit"] {
 						cursor: pointer;
 						transition: all 0.2s;
-
+						border: none;
 						&:hover {
 							background-color: ${({ theme }) => theme.colors.white};
-							border: 1px solid ${({ theme }) => theme.colors.btn};
-							color: ${({ theme }) => theme.colors.btn};
+							border: 1px solid #b9e35f;
+							color: #b9e35f;
 							transform: scale(0.9);
 						}
 					}
@@ -35,23 +35,22 @@ const Contact = () => {
 
 	return (
 		<Wrapper>
-			<h2 className="common-heading">Contact page</h2>
+			<h2 className="common-heading">free feel to contact us</h2>
 
 			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588856342!2d73.91455641541671!3d18.562061287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sPhoenix%20Marketcity%20-%20Viman%20Nagar!5e0!3m2!1sen!2sin!4v1664345115285!5m2!1sen!2sin"
-				width="100%"
-				height="400"
-				style={{ border: 0 }}
-				allowFullScreen=""
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4819962590655!2d72.85301797594383!3d21.212727181433152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f22447dd2a5%3A0xc214902bb338ca23!2sLaxmi%20Dops!5e0!3m2!1sen!2sin!4v1682269579457!5m2!1sen!2sin"
+				width="70%"
+				height="600"
+				style={{ border: "0" }}
+				allowfullscreen=""
 				loading="lazy"
-				title="laxmidops"
-				referrerPolicy="no-referrer-when-downgrade"
+				referrerpolicy="no-referrer-when-downgrade"
 			></iframe>
 
 			<div className="container">
 				<div className="contact-form">
 					<form
-						action="https://formspree.io/f/xeqdgwnq"
+						action="https://formspree.io/f/mzbqyjpb"
 						method="POST"
 						className="contact-inputs"
 					>

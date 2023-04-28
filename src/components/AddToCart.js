@@ -25,7 +25,7 @@ const AddToCart = ({ product }) => {
 	return (
 		<Wrapper>
 			<div className="colors">
-				<p>
+				<p style={{ color: "rgb(126 126 147)" }}>
 					Color:
 					{colors.map((curColor, index) => {
 						return (

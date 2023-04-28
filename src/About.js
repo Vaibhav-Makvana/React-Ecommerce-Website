@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const About = () => {
@@ -7,29 +6,30 @@ const About = () => {
 			<div className="container">
 				<div className="grid grid-two-column">
 					<div className="hero-section-data">
-						<p className="intro-data">Welcome to </p>
-						<h1> Laxmi Dops </h1>
+						<p className="intro-data" style={{ color: "#b9e35f" }}>
+							<b>Vision of</b>
+						</p>
+						<h1 style={{ color: "rgb(126 126 147)" }}> Laxmi Store </h1>
 						<p
 							style={{
 								letterSpacing: "1px",
 								textAlign: "justify",
-								color: "#666",
+								color: "rgb(98 92 92 / 80%)",
 							}}
 						>
-							Established in the year <b>2004</b>, We, <b>“Laxmi Dops”</b>, are
-							engaged in <b>manufacturing, supplying and exporting</b>
-							commendable range of Diamond Cutting & Polishing Dops.
-							Manufactured by making use of high-grade basic material and
-							advanced technology, this range is in compliance with the
-							established parameters of the industry. We design all our products
-							with utmost precision keeping in mind their usage and
-							applicability Designed to perfection, all our products are ensure
-							longer service life, robust construction and resistance against
-							corrosion and fine-finish. Furthermore, the offered range of
-							diamond cutting and polishing tools ensures high grinding
-							efficiency, low grinding force, resistance against wear and longer
-							serviceability that are required for changing diamond from a rough
-							stone into an alluring gem.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+							possimus exercitationem quidem debitis doloremque at? Minima,
+							dignissimos. Consectetur optio itaque qui inventore veniam
+							doloremque nihil adipisci exercitationem suscipit corporis.
+							Voluptatem, provident. Reiciendis, temporibus consectetur fugiat
+							ullam praesentium recusandae eum consequuntur voluptas ad cumque
+							nesciunt corporis voluptatem harum vero culpa alias! Quaerat
+							cumque quam iste fugiat atque nam. Suscipit perspiciatis sint
+							accusantium quo pariatur! Ut dolorem sequi harum iure, deleniti
+							quasi, aspernatur rerum minus fugiat amet facere, necessitatibus
+							nulla! Asperiores corporis ratione facilis eum consectetur ea nemo
+							repellat quos a, ipsam natus dignissimos voluptas saepe in rerum
+							sed. Corporis, cupiditate perferendis.
 						</p>
 					</div>
 					<div className="hero-section-image">
@@ -84,7 +84,7 @@ const Wrapper = styled.section`
 			content: "";
 			width: 60%;
 			height: 80%;
-			background-color: rgba(81, 56, 238, 0.4);
+			background-color: #b9e35f;
 			position: absolute;
 			left: 50%;
 			top: -5rem;

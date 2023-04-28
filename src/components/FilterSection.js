@@ -43,7 +43,7 @@ const FilterSection = () => {
 			</div>
 
 			<div className="filter-category">
-				<h3>Category</h3>
+				<h3 style={{ color: "rgb(126 126 147)" }}>Category</h3>
 				<div>
 					{categoryData.map((curElem, index) => {
 						return (
@@ -63,7 +63,7 @@ const FilterSection = () => {
 			</div>
 
 			<div className="filter-company">
-				<h3>Company</h3>
+				<h3 style={{ color: "rgb(126 126 147)" }}>Company</h3>
 
 				<form action="#">
 					<select
@@ -84,7 +84,7 @@ const FilterSection = () => {
 			</div>
 
 			<div className="filter-colors colors">
-				<h3>Colors</h3>
+				<h3 style={{ color: "rgb(126 126 147)" }}>Colors</h3>
 
 				<div className="filter-color-style">
 					{colorsData.map((curColor, index) => {
@@ -97,6 +97,7 @@ const FilterSection = () => {
 									name="color"
 									className="color-all--style"
 									onClick={updateFilterValue}
+									style={{ color: "rgb(126 126 147)" }}
 								>
 									all
 								</button>
@@ -120,8 +121,8 @@ const FilterSection = () => {
 			</div>
 
 			<div className="filter_price">
-				<h3>Price</h3>
-				<p>
+				<h3 style={{ color: "rgb(126 126 147)" }}>Price</h3>
+				<p style={{ color: "rgb(126 126 147)" }}>
 					<FormatPrice price={price} />
 				</p>
 				<input
@@ -175,13 +176,14 @@ const Wrapper = styled.section`
 				cursor: pointer;
 
 				&:hover {
-					color: ${({ theme }) => theme.colors.btn};
+					color: #b9e35f;
+					font-weight: 600;
 				}
 			}
 
 			.active {
-				border-bottom: 1px solid #000;
-				color: ${({ theme }) => theme.colors.btn};
+				border-bottom: 1px solid #b9e35f;
+				color: #b9e35f;
 			}
 		}
 	}
